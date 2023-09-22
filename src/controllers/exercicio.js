@@ -1,11 +1,11 @@
-const ServicoExercicio = require("../services/exercicio")
+const ServicoCalculadora = require("./services/calculadora.js")
 
-const servico = new ServicoExercicio()
+const servico = new ServicoCalculadora()
 
-class ControllerExercicio {
-    Somar(req, res){
+class ControllerCalculadora {
+    Calculadora(req, res){
         try {
-            const result = servico.Somar(req.body.num1, req.body.num2)
+            const result = servico.Calculadora(req.body.num1, req.body.num2, req.body.operacao)
             res.status(200).json({
                 message: `resultado: ${result}`
             })
@@ -16,4 +16,4 @@ class ControllerExercicio {
     }
 }
 
-module.exports = ControllerExercicio
+module.exports = ControllerCalculadora

@@ -1,12 +1,13 @@
 const express = require("express");
+const router = require('./exercicios/calculadora.js')
 
 const app = express();
 app.use(express.json());
 const port = 3000;
 
-app.post("/api/exercicioum", (req, res) => {
+  app.post("/api/exercicios/calculadora", (req, res) => {
     try {
-      const result = somar(req.body.num1, req.body.num2);
+      const result = calculadora(req.body.num1, req.body.num2, req.body.operacao);
       res.status(200).json({
         message: `resultado: ${result}`,
       });
