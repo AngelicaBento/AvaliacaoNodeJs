@@ -1,12 +1,12 @@
-const express = require("express");
-const router = require('./exercicios/calculadora.js')
+const express = require('express')
+const router = require('./src/routes/calculadora.js')
 
-const app = express();
-app.use(express.json());
-const port = 3000;
+const app = express()
+const port = 3000
 
-// add rota
+app.use(express.json())
+app.use(router)
 
 app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
-  });
+    console.log(` Servidor rodando na porta ${port}`)
+})

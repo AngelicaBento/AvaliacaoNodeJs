@@ -6,6 +6,7 @@ const controller = new ControllerCalculadora()
 const router = express.Router()
 router.post('/api/somar', controller.Somar)
 router.post('/api/subtrair', controller.Subtrair)
-//add outras rotas
+router.post('/api/multiplicar', controller.Multiplicar)
+router.post('/api/dividir', controller.Dividir)
 
 module.exports = router
