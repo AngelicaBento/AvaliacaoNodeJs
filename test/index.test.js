@@ -18,6 +18,8 @@ it('Soma de dois números', () => {
     expect(result).toBe(-1)
 })
 
+// Testes de SUBTRAÇÃO
+
 it("Subtração de dois numeros", () => {
     const result = servico.Subtrair(8.2, 2.2);
     expect(result).toBe(6.2);
@@ -28,6 +30,8 @@ it("Subtração de dois numeros", () => {
     expect(result).toBe(-1);
   });
 
+  // Testes de MULTIPLICAÇÃO
+
   it("Multiplicação de dois numeros", () => {
     const result = servico.Multiplicar(50, 2);
     expect(result).toBe(100);
@@ -37,6 +41,8 @@ it("Subtração de dois numeros", () => {
     const result = servico.Multiplicar(2.5, 3.8);
     expect(result).toBe(10);
   });
+
+  // Testes de DIVISÃO
 
   it("Divisão de dois numeros", () => {
     const result = servico.Dividir(150, 2.5);
